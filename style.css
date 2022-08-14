@@ -28,13 +28,13 @@ body {
   border-radius: 15px;
   display: grid;
   place-items: center;
-  height: 49vh;
+  height:49vh;
   width: 39vw;
 }
 
 h6 {
   font-size: 15px;
-  font-weight: 200;
+  font-weight: 100;
   letter-spacing: 5px;
   margin: 20px 0 0 0;
   color: var(--NeonGreen);
@@ -52,56 +52,43 @@ div button {
   border-radius: 50%;
   padding: 18px;
   border-style: none;
-  position: absolute;
+  position:absolute;
   top: 71vh;
 }
-
-div button:hover {
+div button:hover{
   box-shadow: 0 0 25px var(--NeonGreen);
 }
-
-.mob-divider {
+.mob-divider{
   display: none;
 }
-
-figure img {
-  margin: 0 0 37px 0;
-}
+  figure img{
+    margin: 0 0 37px 0;
+  }
 
 /* Mobile View */
 @media screen and (min-width:375px) {
-  body {
-    height: 100vh;
+
+body{
+  height: 100vh;
     width: 100vw;
-  }
-
+}
   .container {
-    height: 45vh;
-    width: 92vw;
+  height:45vh;
+  width: 92vw;
   }
-
   h6 {
-    font-size: 10px;
-    font-weight: 200;
-    letter-spacing: 4px;
-    margin: 5% 0 0 0;
-    color: var(--NeonGreen);
-  }
-
-  p {
-    font-size: 130%;
-    margin-bottom: 5%;
-  }
-
-  div button {
-    top: 68vh;
-  }
-
-  .mob-divider {
+  font-size: 11px;}
+p{
+  font-size: 135%;
+  margin-bottom: 3%;
+}
+div button{
+  top: 68vh;
+}
+  .mob-divider{
     display: block;
   }
-
-  .desk-divider {
+  .desk-divider{
     display: none;
   }
 }
