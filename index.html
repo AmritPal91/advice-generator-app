@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Advice generator app</title>
+
+</head>
+
+<body>
+  <main>
+    <div class="container">
+      <h6 id="title">Advice #
+        <!-- Advice ID goes here -->
+      </h6>
+
+      <p id="advice">"
+        <!-- Advice text goes here -->"
+      </p>
+      <figure>
+        <img src="./images/pattern-divider-desktop.svg" alt="divider-img">
+      </figure>
+      <button id="next-advice" type="button" name="button"><img src="./images/icon-dice.svg" alt="icon-dice-img"></button>
+    </div>
+  </main>
+
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+  <script>
+    let title = document.getElementById('title');
+    let adviceSlip = document.querySelector("#advice");
+    let nextAdvice = document.querySelector('#next-advice');
+
+    const generateAdvice = async () => {
+
+      try {
+        let setHeader = {
+          headers: {
+            Accept: "application/json"
+          }
+        }
+
+        const result = await fetch('https://api.adviceslip.com/advice', setHeader);
+        let data = await result.json();
+        title.innerHTML = `ADVICE #${data.slip.id}`
+        adviceSlip.innerHTML = `"${data.slip.advice}"`;
+      } catch (error) {
+        console.log(error);
+      }
+    }
+    nextAdvice.addEventListener('click', generateAdvice);
+    generateAdvice()
+  </script>
+</body>
+
+</html>
