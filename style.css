@@ -28,8 +28,8 @@ body {
   border-radius: 15px;
   display: grid;
   place-items: center;
-  height:49vh;
-  width: 39vw;
+  height:40vh;
+  width: 37vw;
 }
 
 h6 {
@@ -53,7 +53,7 @@ div button {
   padding: 18px;
   border-style: none;
   position:absolute;
-  top: 71vh;
+  top: 66vh;
 }
 div button:hover{
   box-shadow: 0 0 25px var(--NeonGreen);
@@ -66,7 +66,7 @@ div button:hover{
   }
 
 /* Mobile View */
-@media screen and (min-width:375px) and (max-width:415px) {
+@media screen and (min-width:360px) and (max-width:415px) {
 
 body{
   height: 100vh;
