@@ -66,7 +66,7 @@ div button:hover{
   }
 
 /* Mobile View */
-@media screen and (min-width:375px) {
+@media screen and (min-width:375px) and (max-width:415px) {
 
 body{
   height: 100vh;
